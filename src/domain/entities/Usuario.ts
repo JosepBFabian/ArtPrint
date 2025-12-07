@@ -1,45 +1,48 @@
 // src/domain/entities/Usuario.ts
 
 enum RolUsuario {
-    ADMIN = 'ADMIN',
-    CLIENTE = 'CLIENTE',
+  ADMIN = 'ADMIN',
+  CLIENTE = 'CLIENTE',
 }
 
 type Usuario = {
-    id: string;
-    cedula: string;
-    nombre: string;
-    correo: string;
-    rol: RolUsuario;
-    telefono: string;
-    direccion: string;
-    fotoPerfil: string;
-    createdAt: Date;
-    updatedAt: Date;
+  id: string;
+  cedula: string;
+  nombre: string;
+  correo: string;
+  rol: RolUsuario;
+  telefono: string;
+  direccion: string;
+  fotoPerfil: string;
+  createdAt: Date;
+  updatedAt: Date;
+  premium: boolean;
 };
 
 const createUsuario = (
-    id: string,
-    cedula: string,
-    nombre: string,
-    correo: string,
-    rol: RolUsuario,
-    telefono: string,
-    direccion: string,
-    fotoPerfil: string,
-    createdAt: Date,
-    updatedAt: Date
+  id: string,
+  cedula: string,
+  nombre: string,
+  correo: string,
+  rol: RolUsuario,
+  telefono: string,
+  direccion: string,
+  fotoPerfil: string,
+  createdAt: Date,
+  updatedAt: Date,
+  premium: boolean
 ): Usuario => ({
-    id,
-    cedula,
-    nombre,
-    correo,
-    rol,
-    telefono,
-    direccion,
-    fotoPerfil,
-    createdAt,
-    updatedAt
+  id,
+  cedula,
+  nombre,
+  correo,
+  rol,
+  telefono,
+  direccion,
+  fotoPerfil,
+  createdAt,
+  updatedAt,
+  premium,
 });
 
 export { Usuario, RolUsuario, createUsuario };
